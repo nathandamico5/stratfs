@@ -7,7 +7,7 @@ const RowEntry = ({ entry, handleSingleCheck, pendingRemoval }) => {
     pendingRemoval.includes(entry.id)
       ? setIsChecked(false)
       : setIsChecked(true);
-  }, [pendingRemoval]);
+  }, [pendingRemoval, entry]);
 
   const handleClick = (e) => {
     setIsChecked(!isChecked);

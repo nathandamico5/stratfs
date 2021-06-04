@@ -83,17 +83,13 @@ const App = () => {
     setTotalRows(totalRows + 1);
   };
 
-  // Toggle handler for opeing up new entry form
-  const addDebt = async () => {
-    setNewRow(true);
-  };
-
   // Handler for deleting selected unselected rows
-  const removeDebt = async () => {
+  const removeDebt = () => {
     let newData = data;
     newData = newData.filter((entry) => !pendingRemoval.includes(entry.id));
     setData(newData);
     getTotals(newData);
+    setPendingRemoval([]);
     // await axios.delete(`https://raw.githubusercontent.com/StrategicFS/Recruitment/master/data.json`)
   };
 
@@ -136,7 +132,7 @@ const App = () => {
       ) : (
         <h3>No Current Entries</h3>
       )}
-      <button className="add btn" onClick={addDebt}>
+      <button className="add btn" onClick={() => setNewRow(true)}>
         Add Debt
       </button>
       {data.length ? (
