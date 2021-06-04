@@ -47,7 +47,7 @@ td.checkbox-col {
 }
 
 tr.unchecked {
-  background-color: maroon;
+  background-color: rgba(200, 0, 0, 0.6);
   color: #ffffff;
 }
 
@@ -64,7 +64,7 @@ tr.unchecked {
   background-color: darkblue;
 }
 .delete {
-  background-color: maroon;
+  background-color: rgba(200, 0, 0, 0.6);
 }
 
 .btn.add:hover,
